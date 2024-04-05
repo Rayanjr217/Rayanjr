@@ -1,0 +1,139 @@
+/* Stil för skärmstrolek */
+@media only screen and (min-width: 380px) {
+    /* Justerar fontstorleken */
+    .card__content {
+        font-size: 1rem;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    /* Öka fontstorleken */
+    .card__content {
+        font-size: 1.5rem;
+    }
+  }
+ @media only screen and (min-width: 768px) {
+ 
+ }
+ @media only screen and (min-width: 996px) {
+    /* Stil för stora skärmar */
+    .grid-lg {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 1rem;
+        grid-auto-flow: initial;
+      }
+      /* Justera storlek */
+    .col-lg-6 {
+        grid-column-end: span 5;
+      }
+      .offset-lg-6 {
+        grid-column-start: 7;
+      }
+ }
+ /* Stil för card-komponenten */
+.card {
+ 
+    /* Bakgrundsfärg och kanter */
+    background-color: hsl(var(--white-hue), 100%, 96%);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+/* Stil för header */
+.card .card__header {
+/* Relativ position, textfärg och fyllning */
+   position: relative;
+ 
+   padding: 4rem 2rem 1.2rem 2rem;
+ 
+   color: hsl(var(--white-hue), 100%, 96%);
+   border-radius: 15px 15px 0 0;
+   
+ 
+}
+       
+h2 {
+     font-size: 3rem;
+     /* Storlek, weight och justering */
+     font-weight: 600;
+     text-align: left;
+     
+     padding-bottom: 2px;
+}
+h5 {
+    /* Storlek, weight och färg */
+   font-size: 1.6rem;
+ 
+   font-weight: 600;
+ 
+   color: hsl(var(--hue-1), 50%, 85%);
+ 
+   }
+.card .img {
+    /* Fyllning, ram, bred och höjd */
+    padding: 1rem;
+    border-radius: 4rem;
+   
+    right: 2rem;
+    width: 75px;
+    height: 75px;
+   
+    border-width: 4px;
+    }*/
+.card__content {
+    /* Fyllning och höjd */
+   padding: 0 5px 0 10px;
+   height: 30px;
+}
+.card__content p {
+    /* Fyllning och fontstorlek */
+    padding: 10px 10px 3px 10px;
+   
+    font-size: 1.5rem;
+   
+}
+.card__footer {
+    /* Fyllning, marginal, textjustering */
+   padding: 20px 20px 20px 20px;
+margin-top: auto;
+   text-align: end;
+   border-radius: 0  0 15px 15px;
+}
+.card__footer a {
+    /* Fyllning, skugga, färg, storlek, fyllning och kanter */
+    padding-top: 50px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.156),
+    7px 7px 20px 0px rgba(0, 0, 0, 0),
+    4px 4px 5px 0px rgba(8, 7, 7, 0.351);
+    width: 160px;
+    height: 55px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: hsl(var(--hue-1), 50%, 90%);
+    padding: 9px 14px;
+    border-radius: 9px;
+}
+/* Stil för blå tema*/
+.blue .card__header , .blue .card__footer, .blue .img {
+    background-color: #3B6891;
+}
+/* Stil för grön tema */
+.green .card__header, .green .card__footer, .green .img {
+    background-color: #22998D;
+}
+
+/* Stil för rosa tema */
+.pink .card__header {
+   
+    background-color: #BC487C;
+   
+}
+   
+.pink .card__footer {
+   
+    background-color: #BC487C;
+   
+}
+   
+.pink .img {
+   
+    background-color: #BC487C;}

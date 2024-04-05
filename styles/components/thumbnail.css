@@ -1,0 +1,184 @@
+/* Stilar för thumbnail */
+.thumbnail {
+    border: 4px solid hsl(var(--hue-1), 20%, 30%);
+    background-color: hsl(var(--hue-1), 25%, 30%);
+    border-radius: var(--br-03);
+    overflow: hidden;
+}
+
+/* Stil för bilder inuti .thumbnail */
+.thumbnail img {
+    border-radius: var(--br-02) var(--br-02) 0 0;
+    border: solid var(--b-1);
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Stilar för namnparagrafen */
+.thumbnail p.pname {
+    color: var(--white);
+    font-family: var(--fontSans);
+    font-size: 1.8rem;
+    letter-spacing: .05em;
+    font-weight: 200;
+    margin: 5px;
+}
+
+/* Stilar för e-postparagrafen */
+.thumbnail p.pmail {
+    color: var(--white);
+    font-style: oblique;
+    font-size: 1.5rem;
+    font-weight: 150;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-align: right;
+}
+
+/* Responsiva stilar för miniatyrbildsbehållaren från 480px bredd och uppåt */
+@media (min-width: 480px) {
+    .thumbnail p.pname {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .thumbnail {
+        border: 2px solid hsl(var(--hue-1), 20%, 30%);
+        border-radius: var(--br-03);
+        background-color: hsl(var(--hue-1), 20%, 30%);
+    }
+
+    .thumbnail p {
+        color: var(--white);
+        color: hsl(var(--hue-1), 20%, 55%);
+        font-size: 1.63rem;
+        font-weight: 350;
+        font-family: var(--fontSans);
+    }
+
+    .thumbnail p.pmail {
+        color: hsl(var(--hue-1), 20%, 55%);
+        font-style: oblique;
+        font-size: 1.5rem;
+        font-weight: 350;
+        padding-right: 0.75rem;
+        text-align: right;
+    }
+
+    .thumbnail img {
+        border-radius: var(--br-03);
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Responsiva stilar för miniatyrbildsbehållaren från 768px bredd och uppåt */
+@media (min-width: 768px) {
+    .thumbnail {
+        border: 1px solid hsl(var(--hue-1), 25%, 30%);
+        border-radius: var(--br-03);
+        background-color: hsl(var(--hue-1), 25%, 30%);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .thumbnail:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: height 0.3s ease;
+        z-index: 1;
+    }
+
+    .thumbnail:hover:before {
+        height: 4.5rem;
+    }
+
+    .thumbnail:hover {
+        mix-blend-mode: color-dodge;
+        box-shadow: var(--bs-size-hover) hsl(var(--hue-1), var(--bs-sla));
+        transition: transform 0.3s ease;
+        transform: scale(1.09);
+    }
+
+    .thumbnail img {
+        border-radius: var(--br-03);
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+
+    .thumbnail:hover img {
+        mix-blend-mode: color-dodge;
+    }
+
+    .thumbnail p.pname, .thumbnail p.pmail {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        color: white;
+        font-family: var(--fontSans);
+        transition: color 0.3s, transform 0.3s ease, visibility 0s linear 0.3s;
+        transform: translateY(100%);
+        z-index: 2;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .thumbnail p.pname {
+        line-height: 4.95rem;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .thumbnail p.pmail {
+        padding-right: 0.8rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .thumbnail:hover p.pname, .thumbnail:hover p.pmail {
+        color: #fff;
+        transform: translateY(0%);
+        visibility: visible;
+        transition-delay: 0s;
+    }
+}
+
+/* Responsiva stilar för miniatyrbildsbehållaren från 996px bredd och uppåt */
+@media (min-width: 996px) {
+    .thumbnail {
+        border: 1px solid hsl(var(--hue-1), 10%, 30%);
+        border-radius: var(--br-03);
+        background-color: hsl(var(--hue-1), 10%, 30%);
+    }
+}
+
+.thumbnail img {
+    border-radius: var(--br-03);
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsiva stilar för miniatyrbildsbehållaren från 1366px bredd och uppåt */
+@media (min-width: 1366px) {
+    .thumbnail p.pname {
+        padding-left: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .thumbnail p.pmail {
+        font-size: 1rem;
+    }
+}
